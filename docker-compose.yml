@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: gunicorn Project.wsgi:application --bind 0.0.0.0:8000 --workers 4
+    command: gunicorn the_styx.wsgi:application --bind 0.0.0.0:8000 --workers 4
     volumes:
       - .:/code
     ports:

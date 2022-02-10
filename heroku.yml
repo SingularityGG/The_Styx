@@ -4,4 +4,4 @@ build:
 release:
   image: web
 run:
-  web: gunicorn Project.wsgi:application --workers 4
+  web: gunicorn the_styx.wsgi:application --workers 4
