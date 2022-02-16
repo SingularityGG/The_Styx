@@ -15,7 +15,7 @@ class Team(models.Model):
     name:str = models.CharField(32)
     elo:int = models.IntegerField()
     owner = models.ForeignKey(
-        get_user_model(), on_delete=CASCADE, null=False
+        get_user_model(), on_delete=models.CASCADE, null=False
     )
     game:Game = models.ForeignKey(Game, on_delete=models.PROTECT)
     rating:float = models.FloatField(default=5.0)
