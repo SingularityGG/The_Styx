@@ -22,7 +22,7 @@ class Scrim(models.Model):
     owner = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, null=False
     )
-    responses:list = models.JSONField(default=list)
+    responses:list = models.JSONField(default=list, blank=True)
     team:Team = models.ForeignKey(Team, on_delete=models.CASCADE)
     start_time:datetime = models.DateTimeField(null=False)
     end_time:datetime = models.DateTimeField(null=False)
