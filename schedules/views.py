@@ -10,7 +10,7 @@ class TeamList(ListCreateAPIView):
 
 class TeamDetail(RetrieveUpdateDestroyAPIView):
     permission_classes = (permissions.DjangoModelPermissionsOrAnonReadOnly,)
-    queuryset = Team.objects.all()
+    queryset = Team.objects.all()
     serializer_class = TeamSerializer
 
 class ScrimList(ListCreateAPIView):
