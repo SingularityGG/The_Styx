@@ -30,9 +30,12 @@ env = environ.Env(
     DATABASE_PASSWORD=(str,""),
     DATABASE_HOST=(str,""),
     DATABASE_PORT=(int,5432),
+    DISCORD_REDIRECT=(str,"")
 )
 
 environ.Env.read_env()
+
+DISCORD_REDIRECT = env.str("DISCORD_REDIRECT")
 
 ENVIRONMENT = env.str("ENVIRONMENT")
 # Quick-start development settings - unsuitable for production
