@@ -15,13 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from discord_login import views
-import discord_login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('teams/', include("schedules.urls")),
     path('game/', include("game.urls")),
-    path('oauth2/', views.home, name="oauth2"),
-    path('oauth2/login', views.discord_login, name="oauth2_login")
+    path('oauth2/', include('discord_login.urls'))
 ]
