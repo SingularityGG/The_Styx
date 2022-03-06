@@ -30,12 +30,16 @@ env = environ.Env(
     DATABASE_PASSWORD=(str,""),
     DATABASE_HOST=(str,""),
     DATABASE_PORT=(int,5432),
-    DISCORD_REDIRECT=(str,"")
+    DISCORD_REDIRECT=(str,""),
+    DISCORD_APP_ID=(int,""),
+    DISCORD_APP_SECRET=(str,""),
 )
 
 environ.Env.read_env()
 
 DISCORD_REDIRECT = env.str("DISCORD_REDIRECT")
+DISCORD_APP_ID = env.int("DISCORD_APP_ID")
+DISCORD_APP_SECRET = env.str("DISCORD_APP_SECRET")
 
 ENVIRONMENT = env.str("ENVIRONMENT")
 # Quick-start development settings - unsuitable for production
