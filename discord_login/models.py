@@ -8,7 +8,7 @@ class DiscordUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     discord_id = models.BigIntegerField()
     username = models.CharField(max_length = 128)
-    discriminator = models.IntegerField()
+    discriminator = models.CharField(max_length=4)
     avatar = models.CharField(max_length=128)
     public_flags = models.IntegerField()
     flags = models.IntegerField()
