@@ -70,7 +70,8 @@ INSTALLED_APPS = [
 
     # local
     "schedules",
-    "game"
+    "game",
+    "discord_login.apps.DiscordLoginConfig"
 ]
 
 MIDDLEWARE = [
